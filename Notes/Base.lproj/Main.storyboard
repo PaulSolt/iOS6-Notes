@@ -91,6 +91,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="noteLabel" destination="MCo-75-iqs" id="Izx-lb-xIc"/>
+                                            <segue destination="npM-T7-Dts" kind="show" identifier="NoteDetail" id="Otj-3f-t42"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -114,6 +115,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2248" y="110"/>
+        </scene>
+        <!--Note Detail View Controller-->
+        <scene sceneID="ib8-fF-kcg">
+            <objects>
+                <viewController id="npM-T7-Dts" customClass="NoteDetailViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fA5-Dv-D6y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vH5-HJ-xaB">
+                                <rect key="frame" x="16" y="88" width="382" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jv6-PI-dx5" firstAttribute="bottom" secondItem="vH5-HJ-xaB" secondAttribute="bottom" id="Dki-5F-l6z"/>
+                            <constraint firstItem="jv6-PI-dx5" firstAttribute="trailing" secondItem="vH5-HJ-xaB" secondAttribute="trailing" constant="16" id="Kun-YO-jAR"/>
+                            <constraint firstItem="vH5-HJ-xaB" firstAttribute="top" secondItem="jv6-PI-dx5" secondAttribute="top" id="VE8-YI-f8W"/>
+                            <constraint firstItem="vH5-HJ-xaB" firstAttribute="leading" secondItem="jv6-PI-dx5" secondAttribute="leading" constant="16" id="m6P-gw-mkH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jv6-PI-dx5"/>
+                    </view>
+                    <connections>
+                        <outlet property="noteTextView" destination="vH5-HJ-xaB" id="d2E-EY-Skh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hke-hR-KNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3023" y="110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PjV-nB-x8w">

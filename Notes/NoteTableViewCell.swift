@@ -15,6 +15,17 @@ class NoteTableViewCell: UITableViewCell {
         print("Share pressed")
     }
     
+    private func updateViews() {
+        guard let note = note else { return }
+        
+        noteLabel.text = note.text
+    }
+    
     @IBOutlet var noteLabel: UILabel!
     
+    var note: Note? {
+        didSet {
+            updateViews()
+        }
+    }
 }

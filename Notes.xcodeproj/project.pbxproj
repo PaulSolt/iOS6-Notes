@@ -16,6 +16,7 @@
 		BDB627F02270D892004ED1B6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB627EF2270D892004ED1B6 /* Note.swift */; };
 		BDB627F22270D8C6004ED1B6 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB627F12270D8C6004ED1B6 /* NoteController.swift */; };
 		BDB627F42270DA32004ED1B6 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB627F32270DA32004ED1B6 /* NoteTableViewCell.swift */; };
+		BDB627F62270F1CA004ED1B6 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB627F52270F1CA004ED1B6 /* NoteDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BDB627EF2270D892004ED1B6 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		BDB627F12270D8C6004ED1B6 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		BDB627F32270DA32004ED1B6 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		BDB627F52270F1CA004ED1B6 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				BDB627E22270C2AA004ED1B6 /* LaunchScreen.storyboard */,
 				BDB627E52270C2AA004ED1B6 /* Info.plist */,
 				BDB627ED2270D21A004ED1B6 /* NotesViewController.swift */,
+				BDB627F52270F1CA004ED1B6 /* NoteDetailViewController.swift */,
 				BDB627EF2270D892004ED1B6 /* Note.swift */,
 				BDB627F12270D8C6004ED1B6 /* NoteController.swift */,
 				BDB627F32270DA32004ED1B6 /* NoteTableViewCell.swift */,
@@ -153,6 +156,7 @@
 				BDB627DA2270C2A9004ED1B6 /* AppDelegate.swift in Sources */,
 				BDB627F42270DA32004ED1B6 /* NoteTableViewCell.swift in Sources */,
 				BDB627F02270D892004ED1B6 /* Note.swift in Sources */,
+				BDB627F62270F1CA004ED1B6 /* NoteDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

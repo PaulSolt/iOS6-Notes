@@ -37,15 +37,17 @@ class NotesViewController: UIViewController { // , UITableViewDelegate {
         
         notesTextView.text = ""
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "NoteDetail" {
+            guard let noteDetailVC = segue.destination as? NoteDetailViewController,
+                let cell = sender as? NoteTableViewCell else { return }
+            
+            noteDetailVC.note = cell.note
+        }
+        
     }
-    */
 
     let noteController = NoteController()
     
@@ -73,7 +75,7 @@ extension NotesViewController: UITableViewDataSource {
         // Get the note for row
         
         let note = noteController.notes[indexPath.row]
-        noteCell.noteLabel.text = note.text
+        noteCell.note = note
         
         return cell
     }
