@@ -76,7 +76,24 @@ extension NotesViewController: UITableViewDataSource {
         
         let note = noteController.notes[indexPath.row]
         noteCell.note = note
+        noteCell.delegate = self
         
         return cell
     }
+}
+
+extension NotesViewController: NoteTableViewCellDelegate {
+
+    func shareNote(for cell: NoteTableViewCell) {
+        //print("share note to the world! \(cell.note)")
+        
+        guard let note = cell.note else { return }
+        
+        let text = note.text
+        
+        let activityController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+        
+    }
+    
 }

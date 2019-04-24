@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol NoteTableViewCellDelegate: AnyObject {
+    func shareNote(for cell: NoteTableViewCell)
+}
+
 class NoteTableViewCell: UITableViewCell {
 
     @IBAction func shareButtonPressed(_ sender: Any) {
         
         print("Share pressed")
+        delegate?.shareNote(for: self)
     }
     
     private func updateViews() {
@@ -22,6 +27,8 @@ class NoteTableViewCell: UITableViewCell {
     }
     
     @IBOutlet var noteLabel: UILabel!
+    
+    weak var delegate: NoteTableViewCellDelegate?
     
     var note: Note? {
         didSet {
