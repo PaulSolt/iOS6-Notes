@@ -23,6 +23,5 @@ class NoteController {
         notes.append(note)
     }
     
-    
     var notes: [Note] = []      // Array of notes
 }

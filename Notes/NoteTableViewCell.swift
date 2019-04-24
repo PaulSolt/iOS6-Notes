@@ -15,8 +15,6 @@ protocol NoteTableViewCellDelegate: AnyObject {
 class NoteTableViewCell: UITableViewCell {
 
     @IBAction func shareButtonPressed(_ sender: Any) {
-        
-        print("Share pressed")
         delegate?.shareNote(for: self)
     }
     

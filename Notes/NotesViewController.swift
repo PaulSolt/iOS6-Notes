@@ -12,22 +12,12 @@ class NotesViewController: UIViewController { // , UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         tableView.delegate = self
         tableView.dataSource = self
-        
     }
-    
 
     @IBAction func saveButtonPressed(_ sender: Any) {
-        print("save")
-        
-        // 1. get the text if it's present
-        // 2. create a new note
-        // 3. update the display
-        
-//        guard let text = notesTextView.text else { return }
         guard let text = notesTextView.text,
             !text.isEmpty else { return }
 
@@ -46,7 +36,6 @@ class NotesViewController: UIViewController { // , UITableViewDelegate {
             
             noteDetailVC.note = cell.note
         }
-        
     }
 
     let noteController = NoteController()
@@ -85,15 +74,11 @@ extension NotesViewController: UITableViewDataSource {
 extension NotesViewController: NoteTableViewCellDelegate {
 
     func shareNote(for cell: NoteTableViewCell) {
-        //print("share note to the world! \(cell.note)")
-        
         guard let note = cell.note else { return }
         
         let text = note.text
         
         let activityController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
-        
     }
-    
 }
